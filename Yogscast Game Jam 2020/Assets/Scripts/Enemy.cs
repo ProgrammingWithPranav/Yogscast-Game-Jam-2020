@@ -11,5 +11,10 @@ public class Enemy : MonoBehaviour
 			collision.GetComponent<PlayerController>().TakeDamage(damage);
 			Destroy(gameObject);
 		}
+
+		if(collision.tag == "Weapon")
+		{
+			Destroy(gameObject);
+		}
 	}
 }
