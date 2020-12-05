@@ -28,7 +28,7 @@ public class PlayerController : MonoBehaviour
         health -= damage;
         if(health <= 0)
 		{
-            Destroy(gameObject);
+            print("Player is dead!!");
 		}
 	}
 }
