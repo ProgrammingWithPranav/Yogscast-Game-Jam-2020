@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-public class EnemyFollow : MonoBehaviour
+public class EnemyFollow : Enemy
 {
     public float speed;
 
@@ -13,6 +13,7 @@ public class EnemyFollow : MonoBehaviour
 
     void Update()
     {
-        transform.position = Vector2.MoveTowards(transform.position, target.position, speed * Time.deltaTime);
+        if (target != null)
+            transform.position = Vector2.MoveTowards(transform.position, target.position, speed * Time.deltaTime);
     }
 }

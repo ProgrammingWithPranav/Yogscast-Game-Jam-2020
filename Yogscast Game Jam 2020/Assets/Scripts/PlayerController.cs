@@ -3,6 +3,7 @@
 public class PlayerController : MonoBehaviour
 {
     public float speed;
+    public float health;
     Rigidbody2D rb;
     Vector2 moveAmount;
 
@@ -20,5 +21,14 @@ public class PlayerController : MonoBehaviour
 	private void FixedUpdate()
 	{
         rb.MovePosition(rb.position + moveAmount * Time.deltaTime);
+	}
+
+    public void TakeDamage(int damage)
+	{
+        health -= damage;
+        if(health <= 0)
+		{
+            Destroy(gameObject);
+		}
 	}
 }
