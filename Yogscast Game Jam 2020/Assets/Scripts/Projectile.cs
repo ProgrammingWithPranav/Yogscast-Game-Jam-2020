@@ -18,13 +18,16 @@ public class Projectile : MonoBehaviour
 
     void Update()
     {
-        transform.position = Vector2.MoveTowards(transform.position, target, speed * Time.deltaTime);
-
-        if(transform.position.x == target.x && transform.position.y == target.y)
+        if (target != null)
 		{
-            player.GetComponent<PlayerController>().TakeDamage(damage);
-            DestroyProjectile();
-		}
+            transform.position = Vector2.MoveTowards(transform.position, target, speed * Time.deltaTime);
+
+            if (transform.position.x == target.x && transform.position.y == target.y)
+            {
+                player.GetComponent<PlayerController>().TakeDamage(damage);
+                DestroyProjectile();
+            }
+        }
     }
 
 	private void OnTriggerEnter2D(Collider2D collision)

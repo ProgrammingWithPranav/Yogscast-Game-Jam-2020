@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.UI;
 
 public class PlayerController : MonoBehaviour
 {
@@ -7,11 +8,15 @@ public class PlayerController : MonoBehaviour
     Rigidbody2D rb;
     Animator anim;
     Vector2 moveAmount;
+    AudioSource source;
+    public AudioClip[] clips;
+    public Slider slider;
 
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
+        source = GetComponent<AudioSource>();
     }
 
     void Update()
@@ -21,10 +26,16 @@ public class PlayerController : MonoBehaviour
 
         if (moveAmount != Vector2.zero)
         {
+			if (!source.isPlaying)
+			{
+                source.clip = clips[0];
+                source.Play();
+            }
             anim.SetBool("isRunning", true);
         }
         else
         {
+            source.Stop();
             anim.SetBool("isRunning", false);
         }
     }
@@ -37,9 +48,12 @@ public class PlayerController : MonoBehaviour
     public void TakeDamage(int damage)
 	{
         health -= damage;
+        slider.value = health;
         if(health <= 0)
 		{
-            print("Player is dead!!");
-		}
+            source.clip = clips[1];
+            source.Play();
+            Destroy(gameObject);
+        }
 	}
 }
