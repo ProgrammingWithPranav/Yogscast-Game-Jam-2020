@@ -8,7 +8,7 @@ public class Enemy : MonoBehaviour
 	{
 		if(collision.tag == "Player")
 		{
-			collision.GetComponent<PlayerController>().GetHelth(damage);
+			collision.GetComponent<PlayerController>().TakeDamage(damage);
 			Destroy(gameObject);
 		}
 

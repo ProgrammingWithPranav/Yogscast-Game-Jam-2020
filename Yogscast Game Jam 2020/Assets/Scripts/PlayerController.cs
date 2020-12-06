@@ -34,9 +34,9 @@ public class PlayerController : MonoBehaviour
         rb.MovePosition(rb.position + moveAmount * Time.deltaTime);
 	}
 
-    public void GetHelth(int damage)
+    public void TakeDamage(int damage)
 	{
-        health += damage;
+        health -= damage;
         if(health <= 0)
 		{
             print("Player is dead!!");

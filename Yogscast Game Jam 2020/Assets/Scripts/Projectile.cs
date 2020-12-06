@@ -22,7 +22,7 @@ public class Projectile : MonoBehaviour
 
         if(transform.position.x == target.x && transform.position.y == target.y)
 		{
-            player.GetComponent<PlayerController>().GetHelth(damage);
+            player.GetComponent<PlayerController>().TakeDamage(damage);
             DestroyProjectile();
 		}
     }
@@ -31,7 +31,7 @@ public class Projectile : MonoBehaviour
 	{
 		if (collision.tag == "Player")
 		{
-            collision.GetComponent<PlayerController>().GetHelth(damage);
+            collision.GetComponent<PlayerController>().TakeDamage(damage);
             DestroyProjectile();
         }
 	}
