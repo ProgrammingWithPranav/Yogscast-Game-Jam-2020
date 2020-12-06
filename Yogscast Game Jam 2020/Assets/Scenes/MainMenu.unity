@@ -517,7 +517,6 @@ GameObject:
   - component: {fileID: 560042587}
   - component: {fileID: 560042586}
   - component: {fileID: 560042585}
-  - component: {fileID: 560042584}
   - component: {fileID: 560042583}
   m_Layer: 5
   m_Name: Website
@@ -555,35 +554,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 560042581}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3315fbd02ab0eee4397e5b4de3a5f413, type: 3}
+  m_Script: {fileID: 11500000, guid: c372a836954bc00449cdfaf28ca799a2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &560042584
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 560042581}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 86d3d0d281f8c604c9f783dc12ac09c6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  OnPress:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 560042583}
-        m_MethodName: OpenWebsite
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
 --- !u!114 &560042585
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -626,7 +599,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 560042586}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 560042583}
+        m_MethodName: OpenWebsite
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &560042586
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -853,7 +837,6 @@ GameObject:
   - component: {fileID: 1442753691}
   - component: {fileID: 1442753690}
   - component: {fileID: 1442753694}
-  - component: {fileID: 1442753693}
   - component: {fileID: 1442753692}
   m_Layer: 5
   m_Name: Youtube
@@ -929,35 +912,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 1442753688}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3315fbd02ab0eee4397e5b4de3a5f413, type: 3}
+  m_Script: {fileID: 11500000, guid: c372a836954bc00449cdfaf28ca799a2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &1442753693
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1442753688}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 86d3d0d281f8c604c9f783dc12ac09c6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  OnPress:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1442753692}
-        m_MethodName: OpenYoutubeChannel
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
 --- !u!114 &1442753694
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1000,7 +957,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1442753690}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1442753692}
+        m_MethodName: OpenChannel
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &1922709464
 GameObject:
   m_ObjectHideFlags: 0

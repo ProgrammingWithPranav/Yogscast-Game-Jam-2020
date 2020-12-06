@@ -3,6 +3,12 @@
 public class Enemy : MonoBehaviour
 {
 	public int damage;
+	AudioSource source;
+
+	private void Start()
+	{
+		source = GetComponent<AudioSource>();
+	}
 
 	private void OnTriggerEnter2D(Collider2D collision)
 	{
@@ -14,6 +20,7 @@ public class Enemy : MonoBehaviour
 
 		if(collision.tag == "Weapon")
 		{
+			source.Play();
 			Destroy(gameObject);
 		}
 	}
