@@ -5,6 +5,6 @@ public class GM : MonoBehaviour
 {
     public void Play()
 	{
-		SceneManager.LoadScene(1);
+		SceneManager.LoadScene(2);
 	}
 }
